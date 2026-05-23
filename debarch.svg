@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Definitions for gradients and drop shadows -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141722" />
+      <stop offset="100%" stop-color="#0c0d12" />
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f3542" />
+      <stop offset="50%" stop-color="#05c46b" />
+      <stop offset="100%" stop-color="#1e2230" />
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26de81" />
+      <stop offset="100%" stop-color="#05c46b" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4757" />
+      <stop offset="50%" stop-color="#ffa502" />
+      <stop offset="100%" stop-color="#26de81" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base (Rounded Rect) -->
+  <rect x="24" y="24" width="464" height="464" rx="100" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="6" filter="url(#shadow)" />
+
+  <!-- Abstract Debian Red Spiral / Arch Triangle Fusion in the Background -->
+  <!-- Debian Swirl (Sleek Dark Red/Orange) -->
+  <path d="M180,160 C240,110 320,130 350,190 C380,250 350,320 290,340 C240,355 190,320 185,270 C180,230 210,195 250,195 C280,195 300,215 295,245 C290,270 270,285 250,280" 
+        fill="none" stroke="#ff4757" stroke-width="12" stroke-linecap="round" opacity="0.15" />
+
+  <!-- Arch Logo Outline (Sleek Dark Blue) -->
+  <path d="M256,120 L380,340 L340,340 L256,190 L172,340 L132,340 Z" 
+        fill="none" stroke="#1793D1" stroke-width="12" stroke-linejoin="round" opacity="0.15" />
+
+  <!-- Main Isometric Packaging Box (Modern 3D-like Box) -->
+  <g transform="translate(256, 266)" filter="url(#shadow)">
+    <!-- Left Face -->
+    <path d="M0,0 L-90,-50 L-90,60 L0,110 Z" fill="#04a75a" />
+    <!-- Right Face -->
+    <path d="M0,0 L90,-50 L90,60 L0,110 Z" fill="#038c4b" />
+    <!-- Top Face -->
+    <path d="M0,-110 L90,-60 L0,-10 L-90,-60 Z" fill="url(#boxGrad)" filter="url(#glow)" />
+    
+    <!-- Top Lid Separator lines -->
+    <path d="M0,-10 L0,-110" stroke="#0c0d12" stroke-width="3" opacity="0.3" />
+    <path d="-90,-60 L90,-60" stroke="#0c0d12" stroke-width="3" opacity="0.3" />
+
+    <!-- Arch-like Arrow pointing down into the box -->
+    <!-- Represents installation/deployment -->
+    <path d="M-40,-150 L0,-110 L40,-150 M0,-170 L0,-110" fill="none" stroke="#05c46b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+  </g>
+
+  <!-- Flowing Dynamic Orbiting Arrows (Represents Deb to Arch Conversion) -->
+  <path d="M120,380 C80,320 80,200 160,140 C200,110 260,105 310,120" 
+        fill="none" stroke="url(#arrowGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="15 10" />
+  
+  <path d="M380,140 C430,200 430,320 350,380 C300,418 220,418 170,390" 
+        fill="none" stroke="url(#boxGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="15 10" />
+
+  <!-- Arrow Heads -->
+  <path d="M320,115 L345,125 L325,145 Z" fill="#26de81" />
+  <path d="M165,395 L140,385 L160,365 Z" fill="#ff4757" />
+
+  <!-- Debian and Arch emblem nodes on the orbit -->
+  <!-- Debian Node -->
+  <circle cx="120" cy="380" r="16" fill="#141722" stroke="#ff4757" stroke-width="4" />
+  <path d="M117,374 C123,371 126,375 125,380 C124,383 121,385 119,384" fill="none" stroke="#ff4757" stroke-width="2" />
+
+  <!-- Arch Node -->
+  <circle cx="380" cy="140" r="16" fill="#141722" stroke="#05c46b" stroke-width="4" />
+  <path d="M380,133 L386,145 L382,145 L380,139 L378,145 L374,145 Z" fill="#05c46b" />
+</svg>

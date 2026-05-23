@@ -1,0 +1,2 @@
+#!/bin/sh
+exec python /usr/share/debarch/deb_installer_gui.py "$@"
