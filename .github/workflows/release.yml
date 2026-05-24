@@ -27,7 +27,7 @@ jobs:
           # Set correct permissions so builder can read/write the workspace
           chown -R builder:builder .
           # Build the package as the builder user
-          sudo -u builder makepkg --noconfirm -s
+          sudo -u builder makepkg --noconfirm -sf
           
       - name: Upload Package Artifact
         uses: actions/upload-artifact@v4
