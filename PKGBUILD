@@ -7,9 +7,9 @@ arch=('any')
 url="https://github.com/alim/DebArch"
 license=('MIT')
 depends=('python' 'python-pyqt6' 'libarchive' 'polkit')
-source=("deb_installer_gui.py"
-        "debarch.desktop"
-        "debarch.svg")
+source=("src/deb_installer_gui.py"
+         "src/debarch.desktop"
+         "src/debarch.svg")
 sha256sums=('SKIP'
             'SKIP'
             'SKIP')

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=DebArch Installer
-Comment=Convert and install Debian packages natively on Arch Linux
-Exec=debarch
-Icon=debarch
-Terminal=false
-Type=Application
-Categories=System;Utility;
-Keywords=deb;arch;installer;package;convert;pacman;
